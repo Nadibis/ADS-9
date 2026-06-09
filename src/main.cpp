@@ -1,3 +1,4 @@
+// Copyright 2022 NNTU-CS
 #include <iostream>
 #include <vector>
 #include <chrono>
