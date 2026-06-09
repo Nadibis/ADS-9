@@ -16,7 +16,7 @@ int main() {
         std::cout << " ";
     }
     std::cout << std::endl;
-    std::cout << "\n=== getPerm1 и getPerm2 ===" << std::endl;
+    std::cout << "\n getPerm1 и getPerm2" << std::endl;
     for (int i = 1; i <= 6; ++i) {
         auto p1 = getPerm1(tree3, i);
         auto p2 = getPerm2(tree3, i);
@@ -37,7 +37,7 @@ int main() {
         auto start = std::chrono::high_resolution_clock::now(); // Измерение getAllPerms
         auto all = getAllPerms(tree);
         auto end = std::chrono::high_resolution_clock::now();
-        long long timeAll = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+        int64_t timeAll = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
         std::random_device rd;  // Случайный номер перестановки
         std::mt19937 gen(rd());
         std::uniform_int_distribution<> dist(1, all.size());
@@ -52,6 +52,5 @@ int main() {
         long long time2 = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
         std::cout << n << "\t" << timeAll << "\t\t" << time1 << "\t\t" << time2 << "\t\t" << all.size() << std::endl;
     }
-    std::cout << "\nЭксперимент завершен. График построен вручную и сохранен в result/plot.png" << std::endl;
     return 0;
 }
