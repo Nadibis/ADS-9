@@ -1,11 +1,10 @@
 // Copyright 2022 NNTU-CS
-#include  <iostream>
-#include  <fstream>
-#include  <locale>
-#include  <cstdlib>
-#include  "tree.h"
 #include <algorithm>
+#include <cmath>
+#include <iostream>
 #include <queue>
+#include <vector>
+#include  "tree.h"
 
 PMTree::PMTree(const std::vector<char>& chars) {
     root = new Node('\0');
