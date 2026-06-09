@@ -36,7 +36,7 @@ int main() {
             chars.push_back('0' + i);
         }
         PMTree tree(chars);
-        auto start = std::chrono::high_resolution_clock::now();//Измер. getAllPerms
+        auto start = std::chrono::high_resolution_clock::now();
         auto all = getAllPerms(tree);
         auto end = std::chrono::high_resolution_clock::now();
         int64_t timeAll = std::chrono::duration_cast
@@ -55,7 +55,7 @@ int main() {
         end = std::chrono::high_resolution_clock::now();
         int64_t time2 = std::chrono::duration_cast
         <std::chrono::microseconds>(end - start).count();
-        std::cout << n << "\t" << timeAll << "\t\t" 
+        std::cout << n << "\t" << timeAll << "\t\t"
         << time1 << "\t\t" << time2 << "\t\t" << all.size() << std::endl;
     }
     return 0;
