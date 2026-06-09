@@ -14,7 +14,7 @@ class PMTree {
     Node* root;
     std::vector<std::vector<char>> allPerms;
     void buildTree(Node* node, std::vector<char> remaining);
-    void collectPerms(Node* node, std::vector<char>& current, 
+    void collectPerms(Node* node, std::vector<char>& current,
                       std::vector<std::vector<char>>& result);
     void deleteTree(Node* node);
     int factorial(int n);
